@@ -1,0 +1,27 @@
+    <div class="container mt-4 col-md-4">
+      <!-- Bootstrap alert for notice -->
+      <% if notice.present? %>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <%= notice %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <script>
+          setTimeout(function(){
+            document.querySelector('.alert-success').style.display = 'none';
+          }, 5000); // Hide after 5 seconds (adjust as needed)
+        </script>
+      <% end %>
+
+      <!-- Bootstrap alert for alert -->
+      <% if alert.present? %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <%= alert %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <script>
+          setTimeout(function(){
+            document.querySelector('.alert-danger').style.display = 'none';
+          }, 5000); // Hide after 5 seconds (adjust as needed)
+        </script>
+      <% end %>
+    </div>
