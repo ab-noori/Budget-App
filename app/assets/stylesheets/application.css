@@ -22,8 +22,7 @@ body {
 }
 
 @media (max-width: 767px) {
-body {
-  background-size: 100vw 100%;
+  body {
+    background-size: 100vw 100%;
+  }
 }
-}
-
