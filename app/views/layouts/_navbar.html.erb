@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-gradient" style="background-color: #591954;">
+    <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">Budget App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#">Link</a>
+            </li>
+        </ul>
+        <div class="d-flex">
+            <% if user_signed_in? %>
+                <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-outline-light" %>
+            <% else %>
+                <%= link_to "Sign in", new_user_session_path, class: "btn btn-outline-light" %>
+                <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-light ms-2" %>
+            <% end %>
+        </div>
+    </div>
+    </div>
+</nav>

@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-size: 100vw 100%;
+  }
+}
